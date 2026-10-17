@@ -6,21 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikCraft - Bicicletas Elétricas</title>
     <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/main.css">
+    <link rel="stylesheet" href="./estilos/global.css">
+    <link rel="stylesheet" href="./estilos/main_2.css">
+    <link rel="stylesheet" href="./estilos/artigo.css">
 </head>
 
 <body>
-    <header>
-        <img src="./img/bikcraft.svg" alt="">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#biciletas">Bicicletas</a>
-                    <a href="#seguros">Seguros</a>
-                    <a href="#contato">Contato</a>
+    <header class="header-bg">
+        <div class="header">
+            <img src="./img/bikcraft.svg" alt="BikCraft" class="foto-marca">
+            <nav aria-label="primeira">
+                <ul>
+                    <li class="list">
+                        <a href="#biciletas" class="links">Bicicletas</a>
+                        <a href="#seguros" class="links">Seguros</a>
+                        <a href="#contato" class="links">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="introducao-bg">
+        <div class="introducao">
+
+            <div class="introducao-conteudo">
+                <h1>Bicicletas feitas sob medida<span class="ponto">.</span></h1>
+                <p>Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft .</p>
+                <a href="./bicicletas" class="foto">Escolha a sua</a>
+            </div>
+            <img src="img/fotos/introducao.jpg" alt="Bicleta eletrica preta">
+        </div>
+    </main>
+
+    <section class="bicicletas">
+        <div class="bicicletas-container">
+            <h2 class="bicicletas-titulo">Escolha a sua<span class="destaque">.</span></h2>
+
+            <ul class="bicicletas-lista">
+                <li class="bicicletas-item">
+                    <img src="img/bicicleta/nimbus1.jpg" alt="Bicicleta Magic Might" class="bicicletas-imagem">
+                    <h3 class="bicicletas-nome">Magic Might</h3>
+                    <p class="bicicletas-preco">R$ 2499</p>
+                </li>
+
+                <li class="bicicletas-item">
+                    <img src="img/bicicleta/nimbus2.jpg" alt="Bicicleta Nimbus Stark" class="bicicletas-imagem">
+                    <h3 class="bicicletas-nome">Nimbus Stark</h3>
+                    <p class="bicicletas-preco">R$ 4999</p>
+                </li>
+
+                <li class="bicicletas-item">
+                    <img src="img/bicicleta/nimbus3.jpg" alt="Bicicleta Nebula Cosmic" class="bicicletas-imagem">
+                    <h3 class="bicicletas-nome">Nebula Cosmic</h3>
+                    <p class="bicicletas-preco">R$ 3999</p>
                 </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </section>
+
+    <article class="tecnologia-bg">
+        <div class="tecnologia">
+            <div class="tecnologia-container">
+                <span class="tecnologia-chamada">Tecnologia Avançada</span>
+                <h2 class="tecnologia-titulo">Você escolhe as suas cores e componentes.</h2>
+                <p class="tecnologia-descricao">Cada Bikcraft é única e possui a sua identidade. As medidas serão exatas para o seu corpo e altura, garantindo maior conforto e ergonomia na sua pedalada. Você pode também personalizar completamente as suas cores.</p>
+                <a href="" class="tecnologia-link">Escolha um modelo</a>
+            </div>
+            <div class="linha">
+                <div class="cartao-tecnologia">
+                    <img src="img/icones/eletrica.svg" alt="" class="cartao-tecnologia-icone">
+                    <h3 class="cartao-tecnologia-titulo">Motor Elétrico</h3>
+                    <p class="cartao-tecnologia-descricao">Toda Bikcraft é equipada com um motor elétrico que possui duração de até 120h. A bateria é recarregada com a sua energia gasta ao pedalar.</p>
+                </div>
+                <div class="cartao-tecnologia-2">
+                    <img src="img/icones/eletrica.svg" alt="" class="cartao-tecnologia-icone">
+                    <h3 class="cartao-tecnologia-titulo">Rastreador</h3>
+                    <p class="cartao-tecnologia-descricao">Sabemos o quão preciosa é a sua Bikcraft, por isso adicionamos rastreadores e sistemas anti-furto para garantir o seu sossego.</p>
+                </div>
+            </div>
+            <div class="tecnologia-imagem">
+                <img src="img/fotos/seguros.jpg" alt="" class="tecnologia-foto">
+            </div>
+        </div>
+    </article>
 </body>
 
 </html>
