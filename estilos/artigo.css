@@ -1,30 +1,5 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-p,
-span {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .tecnologia-bg {
   margin-top: 40px;
   background-color: black;
