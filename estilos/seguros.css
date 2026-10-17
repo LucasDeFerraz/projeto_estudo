@@ -26,6 +26,8 @@ body {
 .grid-seguros {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
+  place-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: white;
@@ -40,13 +42,12 @@ body {
   padding-top: 30px;
   text-transform: uppercase;
   font-size: 4rem;
-  margin-bottom: 20px;
 }
 
 .seguros-plano {
   display: grid;
   gap: 10px;
-  padding: 20px;
+  padding: 40px;
   place-items: center;
   grid-template-columns: 1fr 1fr;
   background-color: black;
@@ -65,7 +66,8 @@ body {
   display: inline-block;
   text-align: center;
   place-content: center;
-  padding: 10px 15px;
+  font-weight: 550;
+  padding: 10px 20px;
   background-color: #404040;
   grid-column: 1;
   text-decoration: none;
@@ -73,18 +75,22 @@ body {
 }
 
 .plano-titulo {
+  padding-bottom: 10px;
   color: #9C9C9C;
   font-size: 2.5rem;
   grid-column: 1;
 }
 
 .plano-preco {
+  padding-bottom: 10px;
   font-size: 2.2rem;
   grid-column: 2;
   grid-row: 1;
 }
 
 .plano-periodo {
+  font-weight: 550;
+  font-size: 1.04rem;
   color: #9C9C9C;
   grid-column: 2;
   grid-row: 2;
@@ -95,11 +101,12 @@ body {
 }
 
 .plano-ouro .plano-link {
+  font-weight: 550;
   color: black;
   background-color: #F9B207;
 }
 
-@media(max-width:600px) {
+@media(max-width:680px) {
   .grid-seguros {
     display: flex;
     justify-content: center;

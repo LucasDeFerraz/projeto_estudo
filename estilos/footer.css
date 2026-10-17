@@ -24,3 +24,89 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.footer-bg {
+  padding: 50px;
+  background-color: black;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer-logo {
+  font-size: 3rem;
+}
+
+footer span {
+  font-weight: 600;
+  color: gray;
+}
+
+.footer-contato {
+  gap: 20px;
+  display: grid;
+  grid-area: 1/2;
+}
+
+.footer-titulo {
+  font-size: 2.1rem;
+}
+
+.icones-footer {
+  padding-top: 23px;
+  display: flex;
+  gap: 30px;
+  grid-area: 2/2;
+}
+
+.footer-informacoes {
+  display: grid;
+  gap: 10px;
+  grid-area: 1/3;
+}
+
+.direitos {
+  grid-area: 4/1;
+}
+
+@media(max-width:700px) {
+  .grid-footer {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-informacoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-contato {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-size: 3.5rem;
+  }
+
+  .footer-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
