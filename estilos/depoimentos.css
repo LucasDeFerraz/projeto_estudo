@@ -49,17 +49,34 @@ body {
 .fala-autora {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: lowercase;
+  font-style: italic;
   font-size: 2rem;
   font-weight: 600;
   color: #332200;
 }
 
 .nome-autora {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.4rem;
   align-items: start;
+  text-decoration: underline;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+
+.nome-autora:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .aspas {
   color: #8b6600;
+}
+
+@media(max-width: 1100px) {
+  .depoimento {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
