@@ -42,3 +42,17 @@ body {
 .termos-paragrafo {
   color: rgb(59, 59, 59);
 }
+
+@media(max-width:700px) {
+  .politicas-termos {
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .termos-container {
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+}
