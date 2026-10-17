@@ -1,24 +1,5 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-p,
-span {
-  margin: 0px;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .depoimento {
   background-color: #ffbb00;
   display: grid;
@@ -32,7 +13,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 .depoimento-container {
   min-width: 0;
