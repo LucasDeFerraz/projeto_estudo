@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.seguros-bg {
+  background-color: #111111;
+}
+
+.seguros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.seguros-container h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  line-height: 1.125;
+}
