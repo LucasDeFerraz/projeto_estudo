@@ -35,10 +35,6 @@
   font-weight: 700;
 }
 
-.pergunta-titulo::-webkit-details-marker {
-  display: none;
-}
-
 .pergunta-titulo::before {
   content: "";
   width: 8px;
@@ -53,10 +49,6 @@
   border-right: 2px solid #a3a3a3;
   border-bottom: 2px solid #a3a3a3;
   transform: rotate(45deg);
-}
-
-.pergunta-item[open] .pergunta-titulo::after {
-  transform: rotate(225deg);
 }
 
 .pergunta-resposta {
