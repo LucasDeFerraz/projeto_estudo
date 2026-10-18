@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Bikcraft</title>
+  <link rel="stylesheet" href="./estilos/style.css">
+</head>
+
+<body>
+  <header class="header-bg">
+    <div class="header conteudo-limitado">
+      <img src="./img/bikcraft.svg" alt="BikCraft" class="foto-marca">
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li class="list">
+            <a href="biciletas.html" class="links">Bicicletas</a>
+            <a href="seguros.html" class="links">Seguros</a>
+            <a href="contatos.html" class="links">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contatos-bg">
+      <div class="contatos-container conteudo-limitado">
+        <div class="contatos-cabecalho">
+          <span class="contatos-chamada">Respostas em até 24h</span>
+          <h1 class="contatos-titulo">nosso contato<span class="destaque">.</span></h1>
+        </div>
+        <section class="contatos-cartao" aria-label="Entre em contato com a loja online">
+          <div class="contatos-informacoes">
+            <h2 class="contatos-loja">Loja Online</h2>
+            <div class="contatos-endereco">
+              <p>Rua Ali Perto, 35</p>
+              <p>Rio de Janeiro - RJ</p>
+              <p>Brasil - Terra - Via Láctea</p>
+            </div>
+            <div class="contatos-emails">
+              <a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a>
+              <a href="mailto:assistencia@bikcraft.com">assistencia@bikcraft.com</a>
+            </div>
+            <a href="tel:+5521999999999" class="contatos-telefone">+55 21 9999-9999</a>
+            <div class="contatos-redes" aria-label="Redes sociais">
+              <img src="img/redes/instagram-p.svg" alt="Instagram">
+              <img src="img/redes/facebook-p.svg" alt="Facebook">
+              <img src="img/redes/youtube-p.svg" alt="YouTube">
+            </div>
+          </div>
+          <form class="contatos-formulario" action="" method="post">
+            <div class="formulario-grupo">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required>
+            </div>
+            <div class="formulario-grupo">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="(21) 9999-9999" autocomplete="tel" required>
+            </div>
+            <div class="formulario-grupo formulario-largo">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="contato@email.com" autocomplete="email" required>
+            </div>
+            <div class="formulario-grupo formulario-largo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="6" placeholder="O que você precisa?" required></textarea>
+            </div>
+            <button class="formulario-botao" type="button" title="Envio disponível após a integração com o servidor">Enviar mensagem</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <section class="lojas-bg" aria-labelledby="lojas-titulo">
+      <div class="lojas-container conteudo-limitado">
+        <h2 id="lojas-titulo" class="lojas-titulo">lojas locais<span class="destaque">.</span></h2>
+        <div class="lojas-lista">
+          <article class="loja-item">
+            <img src="img/lojas/rj.jpg" alt="Mapa da loja no Rio de Janeiro, em Botafogo" class="loja-mapa">
+            <div class="loja-conteudo">
+              <h3 class="loja-nome">Rio de Janeiro</h3>
+              <div class="loja-dados">
+                <div class="loja-endereco">
+                  <p>Rua Ali Perto, 25</p>
+                  <p>Rio de Janeiro - RJ</p>
+                </div>
+                <div class="loja-contato">
+                  <a href="mailto:rj@bikcraft.com">rj@bikcraft.com</a>
+                  <a href="tel:+5521999999999">+55 21 9999-9999</a>
+                </div>
+              </div>
+              <p class="loja-horario">08-18h de seg à dom</p>
+            </div>
+          </article>
+          <article class="loja-item">
+            <img src="img/lojas/sp.jpg" alt="Mapa da loja em São Paulo, próximo à República" class="loja-mapa">
+            <div class="loja-conteudo">
+              <h3 class="loja-nome">São Paulo</h3>
+              <div class="loja-dados">
+                <div class="loja-endereco">
+                  <p>Rua Ali Perto, 25</p>
+                  <p>São Paulo - SP</p>
+                </div>
+                <div class="loja-contato">
+                  <a href="mailto:sp@bikcraft.com">sp@bikcraft.com</a>
+                  <a href="tel:+5511999999999">+55 11 9999-9999</a>
+                </div>
+              </div>
+              <p class="loja-horario">08-18h de seg à dom</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-bg">
+    <div class="grid-footer conteudo-limitado">
+      <h3 class="footer-logo">Bikcraft</h3>
+      <div class="footer-contato">
+        <h3 class="footer-titulo">Contato</h3>
+        <span class="footer-telefone">+55 21 9999-9999</span>
+        <span class="footer-email">contato@bikcraft.com</span>
+        <span class="footer-endereco">Rua Ali Perto, 42 - Botafogo</span>
+        <span class="footer-endereco">Rio de Janeiro - RJ</span>
+      </div>
+      <div class="icones-footer">
+        <img src="img/redes/instagram-p.svg" alt="" class="footer-icone">
+        <img src="img/redes/facebook-p.svg" alt="" class="footer-icone">
+        <img src="img/redes/youtube-p.svg" alt="" class="footer-icone">
+      </div>
+      <div class="footer-informacoes">
+        <h3 class="footer-titulo">Informações</h3>
+        <a href="biciletas.html" class="footer-informacao">Bicicletas</a>
+        <a href="seguros.html" class="footer-informacao">Seguros</a>
+        <a href="contatos.html" class="footer-informacao">Contato</a>
+        <a href="termos.html" class="footer-informacao">Termos e Condições</a>
+      </div>
+      <span class="direitos">Bikcraft © Alguns direitos reservados.</span>
+    </div>
+  </footer>
+</body>
+
+</html>
