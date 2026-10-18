@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+.nimbus-apresentacao {
+  padding: 60px 20px 100px;
+  background-color: #111;
+  color: white;
+}
+
+.nimbus-container {
+  min-width: 0;
+}
+
+.nimbus-preco {
+  display: block;
+  margin-bottom: 6px;
+  color: #b2b2b2;
+  font-size: 2rem;
+}
+
+.nimbus-titulo,
+.nimbus-escolha-titulo {
+  font-size: 4rem;
+  line-height: 1.15;
+}
+
+.nimbus-ponto {
+  color: #ffbb00;
+}
+
+.nimbus-conteudo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  align-items: start;
+}
+
+.nimbus-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.nimbus-galeria img,
+.nimbus-opcao img,
+.nimbus-seguro-imagem {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.nimbus-galeria .nimbus-foto-principal {
+  grid-column: 1 / -1;
+  aspect-ratio: 560 / 440;
+}
+
+.nimbus-galeria img:not(.nimbus-foto-principal) {
+  aspect-ratio: 270 / 180;
+}
+
+.nimbus-detalhes {
+  min-width: 0;
+}
+
+.nimbus-descricao {
+  color: #b2b2b2;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.nimbus-compra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 34px;
+  margin-bottom: 42px;
+}
+
+.nimbus-botao {
+  display: inline-block;
+  width: fit-content;
+  padding: 17px 32px;
+  border-radius: 4px;
+  background-color: #ffbb00;
+  color: #332200;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nimbus-botao:hover {
+  background-color: #e4a600;
+}
+
+.nimbus-disponibilidade {
+  display: grid;
+  gap: 6px;
+  color: #b2b2b2;
+  font-size: 0.75rem;
+}
+
+.nimbus-disponibilidade span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.nimbus-disponibilidade img {
+  width: 16px;
+  height: 16px;
+}
+
+.nimbus-legenda {
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.nimbus-informacoes,
+.nimbus-ficha {
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.nimbus-informacoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.nimbus-informacao img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.nimbus-informacao h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.nimbus-informacao p {
+  color: #b2b2b2;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.nimbus-ficha {
+  margin: 0;
+}
+
+.nimbus-ficha div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  color: #b2b2b2;
+  font-size: 1rem;
+}
+
+.nimbus-ficha div:last-child {
+  border-bottom: 0;
+}
+
+.nimbus-ficha dd {
+  margin: 0;
+  text-align: right;
+}
+
+.nimbus-escolha {
+  padding: 100px 20px 120px;
+  background-color: #fff;
+  color: #111;
+}
+
+.nimbus-escolha-titulo {
+  margin-bottom: 40px;
+}
+
+.nimbus-opcoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.nimbus-opcao img {
+  aspect-ratio: 560 / 340;
+  margin-bottom: 16px;
+}
+
+.nimbus-opcao h3 {
+  position: relative;
+  padding-left: 20px;
+  font-size: 2rem;
+}
+
+.nimbus-opcao h3::before {
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  width: 12px;
+  height: 8px;
+  background-color: #ffbb00;
+  content: "";
+}
+
+.nimbus-opcao p {
+  padding-left: 20px;
+  margin-top: 8px;
+  color: #595959;
+  font-size: 1.125rem;
+}
+
+.nimbus-seguro {
+  padding: 80px 20px;
+  background-color: #111;
+  color: white;
+}
+
+.nimbus-seguro-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 40px;
+}
+
+.nimbus-seguro-imagem {
+  height: 620px;
+}
+
+.nimbus-seguro-conteudo h2 {
+  font-size: 4rem;
+  line-height: 1.15;
+}
+
+.nimbus-seguro-conteudo h2 span {
+  color: #ffbb00;
+}
+
+.nimbus-seguro-conteudo p {
+  margin: 32px 0 24px;
+  color: #b2b2b2;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .nimbus-conteudo,
+  .nimbus-seguro-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nimbus-galeria {
+    max-width: 680px;
+  }
+
+  .nimbus-seguro-imagem {
+    max-height: 450px;
+  }
+
+  .nimbus-seguro-conteudo h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nimbus-apresentacao,
+  .nimbus-escolha,
+  .nimbus-seguro {
+    padding: 50px 16px;
+  }
+
+  .nimbus-preco {
+    font-size: 1.4rem;
+  }
+
+  .nimbus-titulo,
+  .nimbus-escolha-titulo,
+  .nimbus-seguro-conteudo h2 {
+    font-size: 2.5rem;
+  }
+
+  .nimbus-conteudo {
+    gap: 32px;
+    margin-top: 36px;
+  }
+
+  .nimbus-galeria {
+    gap: 10px;
+  }
+
+  .nimbus-descricao,
+  .nimbus-seguro-conteudo p {
+    font-size: 1.125rem;
+  }
+
+  .nimbus-compra {
+    flex-wrap: wrap;
+  }
+
+  .nimbus-informacoes {
+    gap: 24px 16px;
+    padding: 20px;
+  }
+
+  .nimbus-ficha {
+    padding: 20px;
+  }
+
+  .nimbus-opcoes {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nimbus-opcao h3 {
+    font-size: 1.6rem;
+  }
+
+  .nimbus-seguro-imagem {
+    height: 360px;
+  }
+}
