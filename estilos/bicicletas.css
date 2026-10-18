@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.linha-bike {
+  background-color: #111111;
+}
+
+.bike-container {
+  color: white;
+  padding: 50px;
+}
+
+.bike-chamada {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.content-bike-bg {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  background-color: white;
+}
+
+.content-bike {
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bike-fotos {
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+
+.bike-descricao {
+  font-size: 1.1rem;
+  color: gray;
+  grid-area: 2/ 2;
+}
+
+.caracteres-bike {
+  font-size: 1.2rem;
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  display: grid;
+  grid-area: 3/ 2;
+}
+
+.link-div {
+  grid-area: 4/2;
+}
+
+.bike-link {
+  font-size: 1.122rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  padding: 19px 35px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: #F8AC10;
+}
+
+.bike-titulo {
+  font-size: 2rem;
+}
