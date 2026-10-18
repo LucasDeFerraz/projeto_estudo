@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .rodape {
   padding: 100px 0px 100px 0px;
   color: white;
@@ -15,8 +9,6 @@
 .rodape-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .rodape-item {

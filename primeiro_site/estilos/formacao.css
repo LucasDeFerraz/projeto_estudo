@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .formacao {
   padding: 50px;
   margin: 0 auto;
@@ -16,8 +10,6 @@
 .formacao-container {
   color: rgb(238, 238, 238);
   gap: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 80px;
@@ -79,14 +71,7 @@
   justify-self: start;
 }
 
-.formacao-cursos-lista {
-  display: grid;
-  gap: 10px;
-  list-style: none;
-  margin: 12px 0 0;
-  padding: 0;
-}
-
+.formacao-cursos-lista,
 .formacao-idiomas-lista {
   display: grid;
   gap: 10px;
