@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+/* A Nebula usa o layout compartilhado da Nimbus, carregado em style.css. */
+.pagina-nebula a:focus-visible {
+  outline: 3px solid #ffbb00;
+  outline-offset: 4px;
+}
