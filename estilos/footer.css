@@ -8,8 +8,6 @@
 .grid-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  max-width: 1200px;
-  margin: 0 auto;
   color: white;
 }
 

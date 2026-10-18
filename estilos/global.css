@@ -24,3 +24,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Limita e centraliza o conteúdo das seções. */
+.conteudo-limitado {
+  max-width: 1200px;
+  margin: 0 auto;
+}

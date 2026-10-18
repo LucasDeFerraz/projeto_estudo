@@ -53,3 +53,9 @@ a {
 .empresa-habilidades {
   font-size: 1.2rem;
 }
+
+/* Limita e centraliza o conteúdo das seções. */
+.conteudo-limitado {
+  max-width: 1200px;
+  margin: 0 auto;
+}

@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .experiencia {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 40px 20px;
   display: grid;
   align-items: center;
@@ -25,16 +17,19 @@
   flex-wrap: wrap;
   padding: 40px 20px;
   gap: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   align-items: center;
 }
 
-.empresa {
-  grid-area: 1 / 1;
+.empresa,
+.empresa2,
+.empresa3 {
   padding: 0px 10px 0px 0px;
   border-right: 4px solid green;
+}
+
+.empresa {
+  grid-area: 1 / 1;
 }
 
 .empresa_p2 {
@@ -47,14 +42,10 @@
 
 .empresa2 {
   grid-area: 2 / 1;
-  padding: 0px 10px 0px 0px;
-  border-right: 4px solid green;
 }
 
 .empresa3 {
   grid-area: 3 / 1;
-  padding: 0px 10px 0px 0px;
-  border-right: 4px solid green;
 }
 
 .subtitulo {

@@ -12,8 +12,6 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
   color: white;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .termos-chamada {
@@ -29,8 +27,6 @@ body {
   line-height: 1.9;
   padding-top: 120px;
   padding-bottom: 120px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .termos-secao-titulo {
