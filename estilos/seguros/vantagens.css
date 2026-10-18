@@ -1,0 +1,29 @@
+.vantagens-bg {
+  background-color: black;
+  color: white;
+}
+
+.lista-bg {
+  background-color: black;
+  color: white;
+}
+
+.vantagens-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo_vantagens {
+  font-size: 3.6rem;
+}
+
+.vantagens-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.lista-bg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
