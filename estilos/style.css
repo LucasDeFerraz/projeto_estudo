@@ -1,55 +1,13 @@
 @charset "UTF-8";
 
-.header-bg {
-    background-color: black;
-}
-
-.header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.list {
-    list-style: none;
-}
-
-.links {
-    padding: 0px 0px 0px 25px;
-    font-size: 1.1rem;
-    color: white;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.links:hover {
-    color: rgb(196, 196, 196);
-}
-
-.foto-marca {
-    padding: 10px;
-}
-
-@media(max-width: 500px) {
-    .foto-marca {
-        max-width: 200px;
-        height: 90px;
-        max-height: 100px;
-    }
-
-    .links {
-        padding: 0px 0px 0px 11px;
-        max-width: 100px;
-    }
-
-    .list {
-        gap: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header {
-        justify-content: space-around;
-    }
-}
+@import url("./compartilhado/header.css");
+@import url("./index/main.css");
+@import url("./compartilhado/global.css");
+@import url("./index/main_2.css");
+@import url("./index/artigo.css");
+@import url("./index/parceiros.css");
+@import url("./index/depoimentos.css");
+@import url("./seguros/seguros.css");
+@import url("./compartilhado/footer.css");
+@import url("./termos/termos.css");
+@import url("./bicicletas/bicicletas.css");
