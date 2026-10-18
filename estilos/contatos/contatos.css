@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+.contatos-bg {
+  background: linear-gradient(#111 0 520px, #f7f7f7 520px 100%);
+}
+
+.contatos-container {
+  padding: 60px 20px 50px;
+}
+
+.contatos-cabecalho {
+  margin-bottom: 60px;
+}
+
+.contatos-chamada {
+  color: #b2b2b2;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contatos-titulo,
+.lojas-titulo {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.contatos-titulo {
+  margin-top: 12px;
+  color: #fff;
+}
+
+.contatos-cartao {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #0002;
+}
+
+.contatos-informacoes {
+  display: grid;
+  align-content: start;
+  gap: 36px;
+  padding: 60px;
+  background: #000 url("../../img/dec/bottom-left.svg") no-repeat bottom 20px left 20px;
+  color: #ccc;
+}
+
+.contatos-loja {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.contatos-endereco,
+.contatos-emails,
+.contatos-telefone {
+  padding-left: 28px;
+  font-style: normal;
+  line-height: 2;
+}
+
+.contatos-endereco {
+  background: url("../../img/icones/local.svg") no-repeat left 4px;
+}
+
+.contatos-emails {
+  background: url("../../img/icones/email.svg") no-repeat left 5px;
+}
+
+.contatos-telefone {
+  background: url("../../img/icones/telefone.svg") no-repeat left 5px;
+}
+
+.contatos-emails a,
+.contatos-telefone {
+  display: block;
+  width: fit-content;
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contatos-emails a:hover,
+.contatos-telefone:hover,
+.loja-contato a:hover {
+  color: #ffbb00;
+}
+
+.contatos-redes {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0 0 28px;
+}
+
+.contatos-redes img {
+  width: 32px;
+  height: 32px;
+}
+
+.contatos-formulario {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 20px;
+  padding: 60px;
+  background: #fff url("../../img/dec/bottom-right-p.svg") no-repeat bottom 20px right 20px;
+}
+
+.formulario-grupo {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.formulario-largo {
+  grid-column: 1 / -1;
+}
+
+.formulario-grupo label {
+  font-size: 1rem;
+}
+
+.formulario-grupo input,
+.formulario-grupo textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  outline: none;
+  background: #f7f7f7;
+  font: inherit;
+}
+
+.formulario-grupo textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.formulario-grupo input:focus,
+.formulario-grupo textarea:focus {
+  border-color: #ffbb00;
+  background: #fff;
+  box-shadow: 0 0 0 2px #fea;
+}
+
+.formulario-botao {
+  justify-self: start;
+  padding: 16px 30px;
+  border: 0;
+  border-radius: 4px;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  color: #332200;
+  font: 700 1.1rem Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.formulario-botao:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+.lojas-bg {
+  padding: 60px 20px 120px;
+  background: #f7f7f7;
+}
+
+.lojas-titulo {
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.lojas-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.loja-item {
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 1px 3px #0002;
+}
+
+.loja-mapa {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.loja-conteudo {
+  padding: 32px;
+}
+
+.loja-nome {
+  margin-bottom: 32px;
+  color: #111;
+  font-size: 2rem;
+}
+
+.loja-dados {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  color: #595959;
+}
+
+.loja-endereco,
+.loja-contato {
+  padding-left: 12px;
+  border-left: 2px solid #ededed;
+  line-height: 2;
+}
+
+.loja-contato a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.loja-horario {
+  margin-top: 32px;
+  padding-left: 28px;
+  background: url("../../img/icones/horario.svg") no-repeat left center;
+  color: #595959;
+}
