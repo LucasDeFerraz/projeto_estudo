@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+.orcamento-bg {
+  padding-bottom: 120px;
+  background: linear-gradient(#111 0 430px, #f7f7f7 430px 100%);
+}
+
+.orcamento-bg .termos-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.orcamento-bg .termos-titulo {
+  margin-top: 12px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.orcamento {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  width: calc(100% - 40px);
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #0002;
+}
+
+.orcamento-produto {
+  min-width: 0;
+  padding: 60px;
+  background: #000 url("../../img/dec/bottom-left.svg") no-repeat bottom 20px left 20px;
+  color: #fff;
+}
+
+.orcamento-etapa {
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 4px solid #ffbb00;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.orcamento-opcoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.orcamento-opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: 4px;
+  background: #2e2e2e;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.orcamento-opcao input {
+  margin: 0;
+  accent-color: #ffbb00;
+}
+
+.orcamento-opcao:has(input:checked) {
+  background: #fff;
+  color: #111;
+}
+
+.orcamento-dados {
+  min-width: 0;
+  padding: 60px;
+  background: #fff url("../../img/dec/bottom-right-p.svg") no-repeat bottom 20px right 20px;
+}
+
+.orcamento-campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.orcamento-campo {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.orcamento-campo-largo {
+  grid-column: 1 / -1;
+}
+
+.orcamento-campo label {
+  color: #111;
+  font-size: 1rem;
+}
+
+.orcamento-campo input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  background: #f7f7f7;
+  font: inherit;
+}
+
+.orcamento-campo input:focus {
+  outline: 2px solid #ffbb00;
+  background: #fff;
+}
+
+.orcamento-entrega-titulo {
+  margin-top: 40px;
+}
+
+.orcamento-botao {
+  margin-top: 20px;
+  padding: 17px 32px;
+  border: 0;
+  border-radius: 4px;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  color: #332200;
+  font: 700 1.1rem Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.orcamento-botao:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}

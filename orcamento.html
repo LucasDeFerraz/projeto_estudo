@@ -24,21 +24,42 @@
     </div>
   </header>
 
-  <main class="termos-bg">
+  <main class="termos-bg orcamento-bg">
     <div class="termos-cabecalho">
       <div class="termos-container conteudo-limitado">
         <span class="termos-chamada">Cotações no seu email</span>
-        <h1 class="termos-titulo">solicite um orçamento.</h1>
+        <h1 class="termos-titulo">solicite um orçamento<span class="destaque">.</span></h1>
       </div>
     </div>
 
-    <form action="" method="post" class="orcamento">
-      <div class="orcamento-produto">
-        <h2>Bikcraft ou Seguro?</h2>
-        
+    <form action="" method="post" class="orcamento conteudo-limitado">
+      <div class="orcamento-produto" role="radiogroup" aria-labelledby="orcamento-tipo">
+        <h2 id="orcamento-tipo" class="orcamento-etapa">Bikcraft ou Seguro?</h2>
+        <div class="orcamento-opcoes">
+          <label class="orcamento-opcao" for="tipo-bikcraft"><input type="radio" name="tipo" id="tipo-bikcraft" value="bikcraft" required>Bikcraft</label>
+          <label class="orcamento-opcao" for="tipo-seguro"><input type="radio" name="tipo" id="tipo-seguro" value="seguro">Seguro</label>
+        </div>
+      </div>
+      <div class="orcamento-dados">
+        <h2 class="orcamento-etapa">Dados pessoais</h2>
+        <div class="orcamento-campos">
+          <div class="orcamento-campo"><label for="nome">Nome</label><input type="text" name="nome" id="nome" autocomplete="given-name" required></div>
+          <div class="orcamento-campo"><label for="sobrenome">Sobrenome</label><input type="text" name="sobrenome" id="sobrenome" autocomplete="family-name" required></div>
+          <div class="orcamento-campo orcamento-campo-largo"><label for="cpf">CPF</label><input type="text" name="cpf" id="cpf" inputmode="numeric" placeholder="000.000.000-00" autocomplete="off" required></div>
+          <div class="orcamento-campo orcamento-campo-largo"><label for="email">Email</label><input type="email" name="email" id="email" autocomplete="email" required></div>
+        </div>
+        <h2 class="orcamento-etapa orcamento-entrega-titulo">Entrega</h2>
+        <div class="orcamento-campos">
+          <div class="orcamento-campo"><label for="cep">CEP</label><input type="text" name="cep" id="cep" inputmode="numeric" autocomplete="postal-code" required></div>
+          <div class="orcamento-campo"><label for="numero">Número</label><input type="text" name="numero" id="numero" inputmode="numeric" required></div>
+          <div class="orcamento-campo"><label for="logradouro">Logradouro</label><input type="text" name="logradouro" id="logradouro" autocomplete="street-address" required></div>
+          <div class="orcamento-campo"><label for="bairro">Bairro</label><input type="text" name="bairro" id="bairro" required></div>
+          <div class="orcamento-campo"><label for="cidade">Cidade</label><input type="text" name="cidade" id="cidade" autocomplete="address-level2" required></div>
+          <div class="orcamento-campo"><label for="estado">Estado</label><input type="text" name="estado" id="estado" autocomplete="address-level1" required></div>
+        </div>
+        <button class="orcamento-botao" type="button" title="Envio disponível após integração com o servidor">Solicitar orçamento</button>
       </div>
     </form>
-
   </main>
 
   <footer class="footer-bg">
