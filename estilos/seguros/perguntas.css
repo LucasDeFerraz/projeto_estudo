@@ -60,7 +60,17 @@
   transform: rotate(45deg);
 }
 
+
 .pergunta-resposta {
+  display: none;
+  max-width: 76ch;
+  margin: 20px 0 0 20px;
+  color: #404040;
+  line-height: 1.5;
+}
+
+.pergunta-resposta.ativo {
+  display: block;
   max-width: 76ch;
   margin: 20px 0 0 20px;
   color: #404040;
