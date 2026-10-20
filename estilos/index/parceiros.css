@@ -6,21 +6,22 @@
 }
 
 .parceiros-container {
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 .parceiros-titulo {
   text-align: start;
   padding: 0px 0px 0px 20px;
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
 }
 
 .parceiros-lista {
   list-style: none;
   gap: 50px;
-  padding: 50px;
+  margin: 0;
+  padding: 50px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .parceiro-logo {
@@ -30,17 +31,16 @@
 
 @media(max-width: 800px) {
   .parceiros-lista {
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 
   .parceiros-titulo {
     text-align: center;
     padding: 0px;
-    font-size: 4rem;
   }
 
   .parceiro-logo {
-    width: 300px;
+    width: 100%;
   }
 }

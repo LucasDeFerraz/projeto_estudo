@@ -57,3 +57,14 @@
   color: #404040;
   line-height: 1.5;
 }
+
+@media(max-width:600px) {
+  .perguntas-container {
+    padding: 60px 20px;
+  }
+
+  .perguntas-titulo {
+    margin-bottom: 30px;
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+}

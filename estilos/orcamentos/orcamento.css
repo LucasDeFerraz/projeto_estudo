@@ -131,3 +131,34 @@
 .orcamento-botao:hover {
   background: linear-gradient(#ffb60d, #e59317);
 }
+
+@media(max-width:900px) {
+  .orcamento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .orcamento-produto,
+  .orcamento-dados {
+    padding: 40px;
+  }
+}
+
+@media(max-width:500px) {
+  .orcamento-bg {
+    padding-bottom: 60px;
+  }
+
+  .orcamento {
+    width: calc(100% - 32px);
+  }
+
+  .orcamento-produto,
+  .orcamento-dados {
+    padding: 28px 20px;
+  }
+
+  .orcamento-campos,
+  .orcamento-opcoes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

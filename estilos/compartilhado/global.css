@@ -27,6 +27,12 @@ img {
 
 /* Limita e centraliza o conteúdo das seções. */
 .conteudo-limitado {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+:focus-visible {
+  outline: 3px solid #ffbb00;
+  outline-offset: 3px;
 }

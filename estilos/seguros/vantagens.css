@@ -45,3 +45,23 @@
   font-size: 1rem;
   line-height: 1.5;
 }
+
+@media(max-width:900px) {
+  .lista-bg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media(max-width:600px) {
+  .vantagens-container {
+    padding: 60px 20px;
+  }
+
+  .titulo_vantagens {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .lista-bg {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

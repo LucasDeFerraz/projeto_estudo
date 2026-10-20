@@ -62,9 +62,17 @@
   font-weight: 600;
 }
 
-@media(max-width:1200px) {
+@media(max-width:800px) {
   .tecnologia-imagem {
-    display: none;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+  }
+
+  .tecnologia-foto {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
   }
 
   .linha {
@@ -87,5 +95,20 @@
 
   .tecnologia-descricao {
     font-size: 1.2rem;
+  }
+}
+
+@media(max-width:600px) {
+  .tecnologia {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .tecnologia-titulo {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .tecnologia-link {
+    font-size: 1.3rem;
   }
 }

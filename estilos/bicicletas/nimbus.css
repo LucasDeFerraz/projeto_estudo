@@ -172,6 +172,7 @@
 .nimbus-ficha dd {
   margin: 0;
   text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .nimbus-escolha {
@@ -325,5 +326,17 @@
 
   .nimbus-seguro-imagem {
     height: 360px;
+  }
+}
+
+@media(max-width:400px) {
+  .nimbus-titulo,
+  .nimbus-escolha-titulo,
+  .nimbus-seguro-conteudo h2 {
+    font-size: 2rem;
+  }
+
+  .nimbus-informacoes {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

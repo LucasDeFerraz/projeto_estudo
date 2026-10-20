@@ -8,8 +8,9 @@
 
 .introducao {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0px 50px;
+  padding: 20px;
 }
 
 .introducao-conteudo {
@@ -78,7 +79,7 @@
   }
 
   .introducao-conteudo a {
-    position: relative;
-    left: 22%;
+    display: table;
+    margin: 20px auto 0;
   }
 }

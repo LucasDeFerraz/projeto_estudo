@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-body {
-  height: 100vh;
-}
-
 .termos-cabecalho {
   background-color: #111;
 }
@@ -11,6 +7,8 @@ body {
 .termos-container {
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: white;
 }
 
@@ -27,6 +25,8 @@ body {
   line-height: 1.9;
   padding-top: 120px;
   padding-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .termos-secao-titulo {
@@ -41,14 +41,10 @@ body {
 
 @media(max-width:700px) {
   .politicas-termos {
-    padding: 50px;
-    align-items: center;
-    justify-content: center;
+    padding: 50px 20px;
   }
 
   .termos-container {
-    padding: 50px;
-    align-items: center;
-    justify-content: center;
+    padding: 50px 20px;
   }
 }

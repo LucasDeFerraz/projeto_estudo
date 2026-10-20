@@ -227,3 +227,51 @@
   background: url("../../img/icones/horario.svg") no-repeat left center;
   color: #595959;
 }
+
+@media(max-width:950px) {
+  .contatos-cartao {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contatos-informacoes,
+  .contatos-formulario {
+    padding: 40px;
+  }
+}
+
+@media(max-width:700px) {
+  .lojas-lista {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media(max-width:500px) {
+  .contatos-container,
+  .lojas-bg {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contatos-informacoes,
+  .contatos-formulario {
+    padding: 28px 20px;
+  }
+
+  .contatos-formulario,
+  .loja-dados {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lojas-bg {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .lojas-titulo {
+    margin-bottom: 30px;
+  }
+
+  .loja-conteudo {
+    padding: 24px 20px;
+  }
+}
