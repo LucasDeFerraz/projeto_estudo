@@ -35,7 +35,6 @@ galeria.forEach(eventosGaleria)
 
 function trocarImagem(event) {
   const img = event.currentTarget;
-  matchMedia('(min-width:1000px)');
   galeriaContainer.prepend(img)
 }
 
