@@ -1,0 +1,71 @@
+const produtos = [
+  { id: 1, nome: "Teclado", precoCentavos: 12000, estoque: 5, ativo: true },
+  { id: 2, nome: "Mouse", precoCentavos: 6500, estoque: 0, ativo: true },
+  { id: 3, nome: "Cabo USB", precoCentavos: 2500, estoque: 10, ativo: true },
+  { id: 4, nome: "Cabo HDMI", precoCentavos: 4000, estoque: 8, ativo: false },
+  { id: 5, nome: "Webcam", precoCentavos: 18000, estoque: 2, ativo: true },
+];
+
+// Produtos ativos com estoque disponível.
+const produtosDisponiveis = produtos.filter((item) => {
+  if (item.ativo === true && item.estoque > 0) {
+    return item;
+  }
+});
+
+// Busca pelo nome completo.
+function buscarPorNome(produto) {
+  const encontrados = produtos.filter((item) => {
+    if (produto.trim().toLowerCase() === item.nome.trim().toLowerCase()) {
+      return item;
+    }
+  });
+
+  if (encontrados.length === 0) {
+    console.log("Item não encontrado");
+  }
+
+  return encontrados;
+}
+
+// Busca pelo ID, retornando uma array.
+function buscarPorId(id) {
+  if (typeof id !== "number") {
+    console.log("Digite um numero !");
+    return;
+  }
+
+  const idEncontrados = produtos.filter((item) => {
+    if (id === item.id) {
+      console.log("O item foi encontrado !");
+      return item;
+    }
+  });
+
+  if (idEncontrados.length === 0) {
+    console.log("Item não encontrado");
+  }
+
+  return idEncontrados;
+}
+
+// Ordenação sem alterar a ordem da array original.
+function ordenarPorPreco(ordem) {
+  if (
+    ordem.trim().toLowerCase() !== "crescente" &&
+    ordem.trim().toLowerCase() !== "decrescente"
+  ) {
+    console.log("Operação invalida");
+    return [];
+  }
+
+  const checkOrdem = produtos.toSorted((a, b) => {
+    if (ordem.trim().toLowerCase() === "crescente") {
+      return a.precoCentavos - b.precoCentavos;
+    } else if (ordem.trim().toLowerCase() === "decrescente") {
+      return b.precoCentavos - a.precoCentavos;
+    }
+  });
+
+  return checkOrdem;
+}
