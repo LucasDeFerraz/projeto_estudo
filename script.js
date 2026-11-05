@@ -6,6 +6,15 @@ const produtos = [
   { id: 5, nome: "Webcam", precoCentavos: 18000, estoque: 2, ativo: true },
 ];
 
+const pedido = {
+  id: 1,
+  estado: "rascunho",
+  itens: [
+    { produtoId: 1, quantidade: 2 },
+    { produtoId: 3, quantidade: 3 },
+  ],
+};
+
 // Produtos ativos com estoque disponível.
 const produtosDisponiveis = produtos.filter((item) => {
   if (item.ativo === true && item.estoque > 0) {
@@ -69,3 +78,24 @@ function ordenarPorPreco(ordem) {
 
   return checkOrdem;
 }
+
+function validarPedido(pedido) {
+  if (pedido.itens.length === 0) {
+    console.log("Pedido sem itens");
+  } else if (pedido.itens.length > 0) {
+    console.log("Temos pedidos!");
+  }
+  if (pedido.estado !== "rascunho") {
+    console.log("Pedido não está em rascunho");
+  }
+
+  pedido.itens.forEach((element) => {
+    produtos.find((item) => {
+      if (element.produtoId === item.id) {
+        console.log("Produto encontrado:", element.produtoId);
+      }
+    });
+  });
+}
+
+validarPedido(pedido);
