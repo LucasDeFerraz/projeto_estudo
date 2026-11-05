@@ -90,11 +90,16 @@ function validarPedido(pedido) {
   }
 
   pedido.itens.forEach((element) => {
-    produtos.find((item) => {
+    const encontrado = produtos.find((item) => {
       if (element.produtoId === item.id) {
         console.log("Produto encontrado:", element.produtoId);
+        return true;
       }
     });
+
+    if (encontrado === undefined) {
+      console.log("Produto não encontrado!");
+    }
   });
 }
 
