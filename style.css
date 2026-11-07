@@ -9,6 +9,14 @@ p {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+  color: #573a37;
+  font-weight: 500;
+}
+
+li {
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #573a37;
 }
 
 body {
@@ -17,8 +25,19 @@ body {
   background-position: center;
   background-size: cover;
 }
+h1 {
+  line-height: 140%;
+  font-size: 40px;
+  color: #291b1a;
+}
+
+h2 {
+  font-size: 24px;
+  color: #291b1a;
+}
 
 #content-principal {
+  line-height: 1.5;
   border-radius: 24px;
   box-sizing: border-box;
   padding: 24px;
