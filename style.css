@@ -1,0 +1,10 @@
+.margin {
+  text-align: justify;
+  line-height: 1.9;
+  word-spacing: 1rem;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
