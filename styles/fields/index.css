@@ -65,3 +65,7 @@ input[type="file"] {
 fieldset:nth-child(2) {
   margin-top: 50px;
 }
+
+.guardian {
+  margin-top: 60px;
+}
