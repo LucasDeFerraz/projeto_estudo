@@ -27,3 +27,37 @@ textarea:focus {
 select {
   background: url(/pictures/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
 }
+
+label {
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.upload-css {
+  width: 10rem;
+  text-align: center;
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  padding: 10px;
+  color: rgb(61, 61, 61);
+  background-color: rgb(199, 199, 199);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.upload-css:hover {
+  background-color: rgb(182, 182, 182);
+}
+
+.gropzone {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: 2px dotted var(--text-tertiary);
+}
