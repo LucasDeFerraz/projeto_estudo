@@ -23,3 +23,7 @@ textarea:focus {
   outline: 0.25rem solid var(--surface-secondary);
   border: 0.125rem solid var(--stroke-highlight);
 }
+
+select {
+  background: url(/pictures/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
