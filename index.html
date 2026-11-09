@@ -13,6 +13,87 @@
     />
   </head>
   <body>
-    
+    <div id="app">
+      <main>
+        <div class="main-container">
+          <div class="back">
+            <img src="pictures/icons/arrow-left-02.svg" alt="" />
+            <span>Voltar</span>
+          </div>
+
+          <h1>Formulário de matrícula</h1>
+          <p>
+            Preencha os dados abaixo para matricular seu filho na escola de
+            educação infantil Estrelas do Amanhã.
+          </p>
+
+          <form action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <legend>Informações da criança</legend>
+
+              <div class="input-wrapper">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Nome da criança"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="nome">Data de nascimento</label>
+                <input type="date" id="nome" name="nome" lang="pt-BR" />
+              </div>
+
+              <div class="select-wrapper">
+                <label for="nome">Sexo</label>
+                <select name="sexo" id="sexo">
+                  <option value="feminino">Feminino</option>
+                  <option value="masculino">Masculino</option>
+                </select>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="nome">Informações médicas</label>
+                <textarea
+                  name="info-medic"
+                  id="info-medic"
+                  maxlength="900"
+                  cols="30"
+                  rows="10"
+                  placeholder="a criança possui alguma condição medica que a escola deve ficar ciente? se sim, expecifique"
+                ></textarea>
+              </div>
+
+              <div class="file-wrapper">
+                <label for="nome">Certidão de nascimento</label>
+                <input type="file" id="nome" name="nome" multiple />
+                <img
+                  src="pictures/icons/cloud-upload.svg"
+                  alt=""
+                  title="Clique aqui para enviar!"
+                />
+                <p>Clique aqui para selecionar arquivos</p>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+
+      <aside>
+        <div class="aside-container">
+          <header>
+            <img src="pictures/logo.svg" alt="" id="logo" />
+            <h2>Porque cada momento de <span>aprendizado</span> conta</h2>
+            <p>
+              Inscreva seu filho em nossa escola e veja-o florescer em um
+              ambiente acolhedor, seguro e estimulante.
+            </p>
+            <img src="pictures/Illustration.svg" alt="" id="Illustration" />
+          </header>
+        </div>
+      </aside>
+    </div>
   </body>
 </html>

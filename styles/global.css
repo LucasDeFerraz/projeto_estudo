@@ -3,6 +3,24 @@
   margin: 0px;
   box-sizing: border-box;
 }
+body {
+  overflow: hidden;
+}
+p {
+  font-family: var(--font-family);
+  color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 :root {
   --font-family: "Poppins", sans-serif;
