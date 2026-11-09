@@ -6,6 +6,9 @@
 
 :root {
   --font-family: "Poppins", sans-serif;
+  --text: 400 1rem/1.5 var(--font-family);
+  --text-sm: 400 0.875rem/1.4 var(--font-family);
+
   --brand-light: #f67841;
   --brand-mid: #f3541c;
   --brand-dark: #e43a12;
