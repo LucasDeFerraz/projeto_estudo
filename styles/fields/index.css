@@ -61,3 +61,7 @@ input[type="file"] {
   gap: 5px;
   border: 2px dotted var(--text-tertiary);
 }
+
+fieldset:nth-child(2) {
+  margin-top: 50px;
+}

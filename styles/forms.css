@@ -13,3 +13,19 @@ legend {
   font: 600 1.5rem/1.25 var(--font-family);
   margin-bottom: 1.5rem;
 }
+.addres .flex {
+  gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]) {
+  opacity: 0.5;
+}
+
+input {
+  &[disable] {
+    background-color: var(--surface-disabled);
+
+    border: 1px solid var(--stroke-default);
+    color: var(--text-primary);
+  }
+}
