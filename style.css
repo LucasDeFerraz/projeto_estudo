@@ -1,25 +1,2 @@
 @charset "UTF-8";
 
-* {
-  margin: 0px;
-  box-sizing: border-box;
-  padding: 0px;
-}
-.grid {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  background-color: black;
-  gap: 20px;
-  justify-content: center;
-}
-
-.grid div:nth-child(2) {
-  place-self: center start;
-}
-
-.grid > div {
-  background-color: lightblue;
-}
