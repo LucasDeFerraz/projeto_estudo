@@ -1,32 +1,7 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-body {
-  overflow: hidden;
-}
-p {
-  font-family: var(--font-family);
-  color: var(--text-secondary);
-}
-
-h1,
-h2,
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 :root {
   --font-family: "Poppins", sans-serif;
   --text: 400 1rem/1.5 var(--font-family);
   --text-sm: 400 0.875rem/1.4 var(--font-family);
-
   --brand-light: #f67841;
   --brand-mid: #f3541c;
   --brand-dark: #e43a12;
@@ -48,14 +23,65 @@ img {
   --pink: #f682a5;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: var(--text);
+  color: var(--text-primary);
+  background: var(--surface-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--text-highlight);
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--stroke-highlight);
+  outline-offset: 4px;
+}
+
 .flex {
   display: flex;
+  gap: 1.25rem;
 }
 
 .flex-1 {
   flex: 1;
+  min-width: 0;
 }
 
 .flex-2 {
   flex: 2;
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

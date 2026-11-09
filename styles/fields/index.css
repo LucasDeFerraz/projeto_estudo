@@ -1,71 +1,215 @@
-input,
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
 textarea,
 select {
+  display: block;
   width: 100%;
+  min-width: 0;
   appearance: none;
   border-radius: 0.5rem;
   border: 1px solid var(--stroke-default);
   padding: 0.75rem 1rem;
-
+  background-color: var(--surface-primary);
   font: var(--text);
 }
 
 label {
+  display: block;
   font: var(--text-sm);
   color: var(--text-secondary);
-  display: block;
   margin-bottom: 0.25rem;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+input::placeholder, textarea::placeholder {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+
+input:focus, select:focus, textarea:focus {
   outline: 0.25rem solid var(--surface-secondary);
-  border: 0.125rem solid var(--stroke-highlight);
+  border-color: var(--stroke-highlight);
+}
+
+textarea {
+  min-height: 7.5rem;
+  resize: vertical;
 }
 
 select {
-  background: url(/pictures/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+  padding-right: 3rem;
+  background: url("../../pictures/icons/arrow-down-01.svg") no-repeat right 1rem center / 1.5rem;
 }
 
-label {
-  margin-top: 10px;
+input[type="date"] {
+  min-height: 3rem;
 }
 
-input[type="file"] {
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+input[disabled] {
+  background-color: var(--surface-disabled);
+  color: var(--text-secondary);
+}
+
+input:user-invalid, select:user-invalid, textarea:user-invalid {
+  border-color: var(--semantic-error);
+}
+
+.input-wrapper > small, .file-wrapper > small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--text-tertiary);
+  font: var(--text-sm);
+  overflow-wrap: anywhere;
+}
+
+.file-wrapper > small:empty {
   display: none;
 }
-.upload-css {
-  width: 10rem;
-  text-align: center;
-  display: inline-block;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-  padding: 10px;
-  color: rgb(61, 61, 61);
-  background-color: rgb(199, 199, 199);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.5s;
+
+.error {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  color: var(--semantic-error);
+  font: var(--text-sm);
 }
 
-.upload-css:hover {
-  background-color: rgb(182, 182, 182);
+.input-wrapper:has(input:user-invalid) > .error {
+  display: flex;
+}
+
+.error img {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .gropzone {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  border: 2px dotted var(--text-tertiary);
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  border: 2px dashed var(--stroke-default);
+  border-radius: 0.5rem;
+  padding: 1.75rem 1rem;
+  text-align: center;
 }
 
-fieldset:nth-child(2) {
-  margin-top: 50px;
+.gropzone input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.guardian {
-  margin-top: 60px;
+.gropzone p, .gropzone small {
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.gropzone small {
+  font-size: 0.75rem;
+}
+
+.gropzone:hover, .gropzone:focus-within {
+  border-color: var(--stroke-highlight);
+  background: var(--surface-secondary);
+}
+
+.gropzone:focus-within {
+  outline: 3px solid var(--stroke-highlight);
+  outline-offset: 3px;
+}
+
+.radio-wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.shifts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sports {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.radio-inner {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  min-width: 0;
+  min-height: 8rem;
+  margin: 0;
+  padding: 2rem 0.5rem 1rem;
+  border: 1px solid var(--stroke-default);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.radio-inner input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-image {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--stroke-default);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.radio-inner:hover, .radio-inner:has(input:checked) {
+  border-color: var(--stroke-highlight);
+  box-shadow: inset 0 0 0 1px var(--stroke-highlight);
+}
+
+.radio-inner input:checked + .radio-image {
+  background: var(--brand-mid);
+  border-color: var(--brand-mid);
+}
+
+.radio-inner input:checked + .radio-image::after {
+  content: "";
+  position: absolute;
+  left: 0.375rem;
+  top: 0.125rem;
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.radio-inner:has(input:focus-visible) {
+  outline: 3px solid var(--stroke-highlight);
+  outline-offset: 3px;
+}
+
+@media (max-width: 30rem) {
+  .sports {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .sports {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
