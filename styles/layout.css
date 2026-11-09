@@ -1,74 +1,109 @@
 #app {
   display: grid;
-  grid-template-columns: 51.25% 48.75%;
-  height: 100vh;
-  overflow: hidden;
+  grid-template-columns: minmax(0, 51.25fr) minmax(0, 48.75fr);
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 main {
+  min-width: 0;
   padding: 4rem;
-  overflow: auto;
+}
 
-  & .main-container {
-    margin: 0 auto;
-    max-width: 33rem;
+.main-container {
+  max-width: 33rem;
+  margin-inline: auto;
+}
 
-    .back {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding-bottom: 1.5rem;
-      cursor: pointer;
-      color: rgb(78, 78, 78);
-    }
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
 
-    .back span {
-      font-family: var(--font-family);
-      font-weight: 600;
-    }
+.back:hover {
+  color: var(--text-highlight);
+}
 
-    .back span:hover {
-      color: rgb(3, 3, 3);
-    }
-
-    & h1 {
-      padding-block: 10px;
-      font: 600 1.9rem/1.25 var(--font-family);
-    }
-  }
+main h1 {
+  font: 600 1.5rem/1.25 var(--font-family);
+  margin-bottom: 0.5rem;
 }
 
 aside {
+  min-width: 0;
   padding: 4rem;
-  background-color: var(--surface-secondary);
+  background: var(--surface-secondary);
+}
 
-  & .aside-container {
-    margin: 0 auto;
-    max-width: 38rem;
-  }
+.aside-container {
+  position: sticky;
+  top: 4rem;
+  max-width: 31rem;
+  margin-inline: auto;
+}
 
-  & h2 {
-    font: 600 2.5rem/1.25 var(--font-family);
-    margin-bottom: 0.5rem;
+aside header {
+  display: grid;
+  gap: 0.5rem;
+}
 
-    span {
-      color: var(--text-highlight);
-    }
-  }
+aside h2 {
+  font: 600 2.5rem/1.25 var(--font-family);
+}
 
-  & header {
+aside h2 span {
+  color: var(--text-highlight);
+}
+
+#logo {
+  width: 12.6875rem;
+}
+
+#Illustration {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* No celular, a apresentação vem antes do formulário. */
+@media (max-width: 64rem) {
+  #app {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column-reverse;
   }
 
-  & .aside-container #logo {
-    width: 250px;
+  main, aside {
+    padding: 2.5rem 2rem;
   }
 
-  & .aside-container #Illustration {
-    padding-top: 4rem;
-    background-position: center;
-    background-repeat: no-repeat;
+  .aside-container {
+    position: static;
+    max-width: 33rem;
+  }
+
+  aside h2 {
+    font-size: 2rem;
+  }
+
+  #Illustration {
+    width: min(100%, 24rem);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 30rem) {
+  main, aside {
+    padding: 2rem 1.5rem;
+  }
+
+  aside h2 {
+    font-size: 1.75rem;
+  }
+
+  #Illustration {
+    margin-top: 1.5rem;
   }
 }

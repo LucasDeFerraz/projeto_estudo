@@ -5,21 +5,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estrelas do amanhã</title>
+    <title>Formulário de matrícula | Estrelas do Amanhã</title>
     <link rel="stylesheet" href="styles/index.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div id="app">
-      <main>
+      <main id="inicio">
         <div class="main-container">
-          <div class="back">
+          <a class="back" href="#apresentacao">
             <img src="pictures/icons/arrow-left-02.svg" alt="" />
             <span>Voltar</span>
-          </div>
+          </a>
 
           <h1>Formulário de matrícula</h1>
           <p>
@@ -27,7 +27,7 @@
             educação infantil Estrelas do Amanhã.
           </p>
 
-          <form action="" method="post" enctype="multipart/form-data">
+          <form id="formulario-matricula" action="" method="post" enctype="multipart/form-data">
             <fieldset>
               <legend>Informações da criança</legend>
 
@@ -38,16 +38,18 @@
                   id="nome"
                   name="nome"
                   placeholder="Nome da criança"
+                  autocomplete="off"
+                  required
                 />
               </div>
 
               <div class="input-wrapper">
-                <label for="nome">Data de nascimento</label>
-                <input type="date" id="nome" name="nome" lang="pt-BR" />
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required />
               </div>
 
               <div class="select-wrapper">
-                <label for="nome">Sexo</label>
+                <label for="sexo">Sexo</label>
                 <select name="sexo" id="sexo">
                   <option value="feminino">Feminino</option>
                   <option value="masculino">Masculino</option>
@@ -55,34 +57,26 @@
               </div>
 
               <div class="textarea-wrapper">
-                <label for="nome">Informações médicas</label>
+                <label for="info-medic">Informações médicas</label>
                 <textarea
                   name="info-medic"
                   id="info-medic"
                   maxlength="900"
                   cols="30"
-                  rows="10"
-                  placeholder="a criança possui alguma condição medica que a escola deve ficar ciente? se sim, expecifique"
+                  rows="5"
+                  placeholder="A criança possui alguma condição médica de que a escola deve estar ciente? Se sim, especifique."
                 ></textarea>
               </div>
 
               <div class="file-wrapper">
-                <label for="nome">Certidão de nascimento</label>
+                <label for="upload-foto">Certidão de nascimento</label>
                 <div class="gropzone">
-                  <label
-                    class="upload-css"
-                    for="upload-foto"
-                    title="Clique aqui para enviar!"
-                    >Escolher arquivos</label
-                  >
-                  <input type="file" id="upload-foto" name="nome" multiple />
-                  <img
-                    src="pictures/icons/cloud-upload.svg"
-                    alt=""
-                    title="Clique aqui para enviar!"
-                  />
-                  <p>Clique aqui para selecionar arquivos</p>
+                  <input type="file" id="upload-foto" name="certidao" accept=".pdf,.jpg,.jpeg,.png" multiple aria-describedby="upload-ajuda arquivos-selecionados" />
+                  <img src="pictures/icons/cloud-upload.svg" alt="" width="48" height="48" />
+                  <p>Clique aqui para<br />selecionar arquivos</p>
+                  <small id="upload-ajuda">PDF, JPG ou PNG</small>
                 </div>
+                <small id="arquivos-selecionados" role="status"></small>
               </div>
             </fieldset>
 
@@ -90,112 +84,224 @@
               <legend>Endereço residencial</legend>
               <div class="input-wrapper">
                 <label for="cep">CEP</label>
-                <input type="text" id="cep" name="cep" />
+                <input type="text" id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" pattern="[0-9]{5}-?[0-9]{3}" title="Informe oito números, com ou sem hífen." required />
               </div>
 
-              <div class="flex flex-1">
+              <div class="flex">
                 <div class="input-wrapper">
-                  <label for="cidade">Rua</label>
+                  <label for="rua">Rua</label>
                   <input
                     type="text"
-                    id="cidade"
-                    name="cidade"
-                    value="Rua das Flores"
-                    disabled
+                    id="rua"
+                    name="rua"
+                    placeholder="Rua das Flores"
+                    autocomplete="address-line1"
+                    required
                   />
                 </div>
 
                 <div class="input-wrapper">
                   <label for="numero">Número</label>
-                  <input type="text" id="numero" name="numero" />
+                  <input type="text" id="numero" name="numero" placeholder="123" required />
                 </div>
               </div>
-              <div class="flex flex-2">
+              <div class="flex">
                 <div class="input-wrapper">
                   <label for="cidade">Cidade</label>
                   <input
                     type="text"
                     id="cidade"
                     name="cidade"
-                    value="São Paulo"
-                    disabled
+                    placeholder="São Paulo"
+                    autocomplete="address-level2"
+                    required
                   />
                 </div>
 
                 <div class="input-wrapper">
                   <label for="estado">Estado</label>
-                  <input type="text" id="estado" name="estado" />
+                  <input type="text" id="estado" name="estado" autocomplete="address-level1" placeholder="SP" maxlength="2" pattern="[A-Za-z]{2}" title="Informe a sigla do estado com duas letras." required />
                 </div>
               </div>
 
-              <fieldset class="guardian">
-                <legend>Informações do responsável</legend>
+            </fieldset>
 
-                <div class="input-wrapper">
-                  <label for="guardian">Nome do responsável</label>
-                  <input type="text" name="guardian" id="guardian" />
-                  <small
-                    >Principal responsável legal e contato de emergência</small
-                  >
+            <fieldset class="guardian">
+              <legend>Informações do responsável</legend>
+
+              <div class="input-wrapper">
+                <label for="guardian">Nome do responsável</label>
+                <input type="text" name="responsavel" id="guardian" autocomplete="name" aria-describedby="responsavel-ajuda" required />
+                <small id="responsavel-ajuda"
+                  >Principal responsável legal e contato de emergência</small
+                >
+              </div>
+
+              <div class="input-wrapper">
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" autocomplete="tel" placeholder="(11) 99999-9999" pattern="\+?[0-9\(\) .\-]{10,20}" title="Informe um telefone com DDD." required />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="exemplo@email.com" aria-describedby="email-erro" required />
+                <div class="error" id="email-erro">
+                  <img src="pictures/icons/alert-circle.svg" alt="" />
+                  <span>Insira um e-mail válido</span>
                 </div>
+              </div>
+            </fieldset>
 
-                <div class="input-wrapper">
-                  <label for="telfone">Telefone</label>
-                  <input type="tel" name="telfone" id="telfone" required />
-                </div>
+            <fieldset class="enroll-options">
+              <legend>Opções de matrícula</legend>
 
-                <div class="input-wrapper">
-                  <label for="email">E-mail</label>
-                  <input type="email" name="email" id="email" required />
-                  <div class="error">
-                    <img src="pictures/icons/alert-circle.svg" alt="" />
-                    <span>Insira um e-mail válido</span>
-                  </div>
+              <fieldset class="option-group">
+                <legend>Selecione o turno de estudo</legend>
+                <div class="radio-wrapper shifts">
+                  <label class="radio-inner" for="morning">
+                    <input type="radio" name="turno" id="morning" value="manha" checked required />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/sun-cloud-02.svg" alt="" width="48" height="48" />
+                    <span>Manhã</span>
+                  </label>
+                  <label class="radio-inner" for="afternoon">
+                    <input type="radio" name="turno" id="afternoon" value="tarde" />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/sun-02.svg" alt="" width="48" height="48" />
+                    <span>Tarde</span>
+                  </label>
                 </div>
               </fieldset>
 
-              <fieldset class="enroll-options">
-                <legend>Opções de matrícula</legend>
-
-                <div class="input-wrapper">
-                  <label>Selecione o turno de estudo</label>
-
-                  <div class="radio-wrapper">
-                    <div class="radio-inner">
-                      <div class="radio-image"></div>
-                      <input type="radio" name="study-shift" id="morning" value="morning">
-                      <img src="pictures/icons/sun-cloud-02.svg" alt="">
-                      <label for="morning">Manhã</label>
-                    </div>
-                  </div>
-                      <div class="radio-wrapper">
-                        <div class="radio-inner">
-                          <div class="radio-image"></div>
-                          <input type="radio" name="study-shift" id="evening" value="evening">
-                          <img src="pictures/icons/sun-02.svg" alt="">
-                          <label for="evening">Tarde</label>
-                        </div>
-                      </div>
+              <fieldset class="option-group">
+                <legend>Em qual esporte você gostaria de inscrever seu filho?</legend>
+                <div class="radio-wrapper sports">
+                  <label class="radio-inner" for="football">
+                    <input type="radio" name="esporte" id="football" value="futebol" required />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/football.svg" alt="" width="48" height="48" />
+                    <span>Futebol</span>
+                  </label>
+                  <label class="radio-inner" for="basketball">
+                    <input type="radio" name="esporte" id="basketball" value="basquete" />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/basketball-02.svg" alt="" width="48" height="48" />
+                    <span>Basquete</span>
+                  </label>
+                  <label class="radio-inner" for="swimming">
+                    <input type="radio" name="esporte" id="swimming" value="natacao" checked />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/swimming.svg" alt="" width="48" height="48" />
+                    <span>Natação</span>
+                  </label>
+                  <label class="radio-inner" for="yoga">
+                    <input type="radio" name="esporte" id="yoga" value="yoga" />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/yoga-02.svg" alt="" width="48" height="48" />
+                    <span>Yoga</span>
+                  </label>
+                  <label class="radio-inner" for="volleyball">
+                    <input type="radio" name="esporte" id="volleyball" value="volei" />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/volleyball.svg" alt="" width="48" height="48" />
+                    <span>Vôlei</span>
+                  </label>
+                  <label class="radio-inner" for="boxing">
+                    <input type="radio" name="esporte" id="boxing" value="boxe" />
+                    <span class="radio-image" aria-hidden="true"></span>
+                    <img src="pictures/icons/boxing-glove-01.svg" alt="" width="48" height="48" />
+                    <span>Boxe</span>
+                  </label>
                 </div>
               </fieldset>
             </fieldset>
+
+            <div class="terms-wrapper">
+              <input type="checkbox" id="termos" name="termos" required />
+              <span class="checkbox-image" aria-hidden="true"></span>
+              <label for="termos">Declaro que li e concordo com os <a href="#termos-dialog" data-dialog="termos-dialog">Termos e Condições</a> e com a <a href="#privacidade-dialog" data-dialog="privacidade-dialog">Política de Privacidade</a> da escola Estrelas do Amanhã.</label>
+            </div>
+
+            <div class="actions-wrapper">
+              <button class="button-secondary" type="button" id="salvar-respostas">Salvar respostas</button>
+              <button class="button-primary" type="submit" id="fazer-matricula" disabled>Fazer matrícula</button>
+            </div>
+            <p class="form-status" id="form-status" role="status" tabindex="-1"></p>
+            <noscript><p class="demo-note">Projeto demonstrativo. Ative o JavaScript para salvar um rascunho ou simular a matrícula; os dados não são enviados a uma escola.</p></noscript>
           </form>
         </div>
       </main>
 
-      <aside>
+      <aside id="apresentacao" aria-labelledby="titulo-apresentacao" tabindex="-1">
         <div class="aside-container">
           <header>
-            <img src="pictures/logo.svg" alt="" id="logo" />
-            <h2>Porque cada momento de <span>aprendizado</span> conta</h2>
+            <img src="pictures/logo.svg" alt="Estrelas do Amanhã" id="logo" />
+            <h2 id="titulo-apresentacao">Porque cada momento de <span>aprendizado</span> conta</h2>
             <p>
               Inscreva seu filho em nossa escola e veja-o florescer em um
               ambiente acolhedor, seguro e estimulante.
             </p>
-            <img src="pictures/Illustration.svg" alt="" id="Illustration" />
           </header>
+          <img src="pictures/Illustration.svg" alt="Professora e crianças em uma sala de aula." id="Illustration" width="496" height="368" />
         </div>
       </aside>
     </div>
+    <dialog id="termos-dialog" aria-labelledby="titulo-termos">
+      <h2 id="titulo-termos">Termos e Condições</h2>
+      <p>Este é um projeto de estudo de frontend. O preenchimento serve apenas para demonstração e não realiza uma matrícula em uma escola.</p>
+      <p>Utilize somente dados fictícios. Os termos de uma escola real precisariam ser definidos antes de disponibilizar este formulário para uso real.</p>
+      <form method="dialog"><button class="button-primary">Fechar</button></form>
+    </dialog>
+    <dialog id="privacidade-dialog" aria-labelledby="titulo-privacidade">
+      <h2 id="titulo-privacidade">Política de Privacidade</h2>
+      <p>Esta demonstração não envia os dados do formulário nem os arquivos selecionados para um servidor. Ao salvar respostas, um rascunho é baixado apenas no seu dispositivo.</p>
+      <p>O rascunho contém os campos preenchidos, mas não inclui os anexos. Use dados fictícios e evite inserir informações pessoais ou médicas reais.</p>
+      <form method="dialog"><button class="button-primary">Fechar</button></form>
+    </dialog>
+
+    <script>
+      // Interações locais da demonstração: não há backend ou envio de matrícula.
+      const formulario = document.querySelector("#formulario-matricula");
+      const aviso = document.querySelector("#form-status");
+      const nascimento = document.querySelector("#nascimento");
+      const hoje = new Date();
+      nascimento.max = `${hoje.getFullYear()}-${String(hoje.getMonth() + 1).padStart(2, "0")}-${String(hoje.getDate()).padStart(2, "0")}`;
+
+      document.querySelector("#upload-foto").addEventListener("change", (evento) => {
+        document.querySelector("#arquivos-selecionados").textContent =
+          Array.from(evento.target.files, (arquivo) => arquivo.name).join(", ");
+      });
+
+      document.querySelectorAll("[data-dialog]").forEach((link) => {
+        link.addEventListener("click", (evento) => {
+          evento.preventDefault();
+          document.getElementById(link.dataset.dialog).showModal();
+        });
+      });
+
+      document.querySelector("#salvar-respostas").addEventListener("click", () => {
+        const respostas = {};
+        new FormData(formulario).forEach((valor, nome) => {
+          if (!(valor instanceof File)) respostas[nome] = valor;
+        });
+        const arquivo = new Blob([JSON.stringify(respostas, null, 2)], { type: "application/json" });
+        const endereco = URL.createObjectURL(arquivo);
+        const link = document.createElement("a");
+        link.href = endereco;
+        link.download = "matricula-rascunho.json";
+        document.body.append(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(endereco), 1000);
+        aviso.textContent = "Rascunho baixado no seu dispositivo, sem os anexos. Nenhum dado foi enviado.";
+      });
+
+      formulario.addEventListener("submit", (evento) => {
+        evento.preventDefault();
+        aviso.textContent = "Formulário validado! Esta é uma demonstração: nenhuma matrícula foi enviada e os dados continuam nesta página.";
+        aviso.focus();
+      });
+      document.querySelector("#fazer-matricula").disabled = false;
+    </script>
   </body>
 </html>
